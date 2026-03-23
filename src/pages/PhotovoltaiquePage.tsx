@@ -480,7 +480,7 @@ export default function PhotovoltaiquePage() {
       </section>
 
       {/* Normes et certifications — Dark band 2 columns */}
-      <section className="mx-5 lg:mx-auto px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14" style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, marginBottom: 80 }}>
+      <section className="mx-5 sm:mx-auto" style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, marginBottom: 80, padding: "56px 48px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
