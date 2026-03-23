@@ -480,7 +480,7 @@ export default function PhotovoltaiquePage() {
       </section>
 
       {/* Normes et certifications — Dark band 2 columns */}
-      <section className="mx-4 sm:mx-auto" style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, marginBottom: 80, padding: "40px 24px" }} >
+      <section className="mx-5 lg:mx-auto px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14" style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, marginBottom: 80 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -497,7 +497,7 @@ export default function PhotovoltaiquePage() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]" style={{ gap: 0 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-[1fr_1px_1fr]" style={{ gap: 0 }}>
           {/* Left column */}
           <div>
             {certifications.slice(0, 2).map((cert, i) => (
@@ -508,7 +508,7 @@ export default function PhotovoltaiquePage() {
                 transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
                 style={{
-                  padding: "24px 16px 24px 0",
+                  padding: "24px 32px 24px 0",
                   borderBottom: "1px solid rgba(255,255,255,0.1)",
                 }}
               >
@@ -524,7 +524,7 @@ export default function PhotovoltaiquePage() {
           </div>
 
           {/* Vertical separator — hidden on mobile */}
-          <div className="hidden lg:block" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
+          <div className="hidden sm:block" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
 
           {/* Right column */}
           <div>
@@ -536,7 +536,7 @@ export default function PhotovoltaiquePage() {
                 transition={{ duration: 0.5, delay: (i + 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
                 style={{
-                  padding: "24px 0 24px 0",
+                  padding: "24px 0 24px 32px",
                   borderBottom: i < 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
                 }}
               >
