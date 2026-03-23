@@ -566,34 +566,34 @@ export default function AdminDashboard() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+          <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#E40714] to-[#C00612] rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
-                <LayoutDashboard className="text-white" size={20} />
+              <div className="w-12 h-12 bg-gradient-to-br from-[#E40714] to-[#C00612] rounded-2xl flex items-center justify-center shadow-lg">
+                <LayoutDashboard className="text-white" size={24} />
               </div>
               <div>
-                <h1 className="text-[28px] sm:text-[48px] text-[#212121] font-rajdhani font-black uppercase leading-none">Dashboard Admin</h1>
-                <p className="text-[#1B1B1B]/70 text-[13px] sm:text-[16px]">Gerez l'ensemble de votre contenu METALR</p>
+                <h1 className="text-[48px] text-[#212121] font-rajdhani font-black uppercase leading-none max-sm:text-[28px]">Dashboard Admin</h1>
+                <p className="text-[#1B1B1B]/70 text-[16px]">Gerez l'ensemble de votre contenu METALR</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 w-full sm:w-auto">
-              <Link to="/" className="flex-1 sm:flex-none">
+            <div className="flex items-center gap-4">
+              <Link to="/">
                 <motion.button
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white text-[#1B1B1B] border-2 border-[#C6C6C6]/30 rounded-xl hover:border-[#E40714] transition-all duration-300 shadow-lg font-bold text-[13px] sm:text-[14px]"
+                  className="flex items-center gap-2 px-6 py-3 bg-white text-[#1B1B1B] border-2 border-[#C6C6C6]/30 rounded-xl hover:border-[#E40714] transition-all duration-300 shadow-lg font-bold"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Eye size={18} />
+                  <Eye size={20} />
                   Voir le site
                 </motion.button>
               </Link>
               <motion.button
-                className="flex items-center justify-center gap-2 flex-1 sm:flex-none px-4 py-2.5 bg-[#E40714] text-white rounded-xl hover:bg-[#C00612] transition-all duration-300 shadow-lg font-bold text-[13px] sm:text-[14px]"
+                className="flex items-center gap-2 px-6 py-3 bg-[#E40714] text-white rounded-xl hover:bg-[#C00612] transition-all duration-300 shadow-lg font-bold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleLogout}
               >
-                <LogOut size={18} />
+                <LogOut size={20} />
                 Deconnexion
               </motion.button>
             </div>
@@ -739,15 +739,15 @@ export default function AdminDashboard() {
                   <h2 className="text-[36px] text-[#212121] font-rajdhani font-black uppercase">Gestion des actualites</h2>
                   <p className="text-[14px] text-[#1B1B1B]/60 mt-1">{filteredNews.length} article{filteredNews.length > 1 ? "s" : ""}</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="relative">
+                <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                  <div className="relative flex-1 min-w-[200px]">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1B1B1B]/40" size={20} />
                     <input
                       type="text"
                       placeholder="Rechercher..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-12 pr-4 py-3 rounded-xl border-2 border-[#C6C6C6]/30 focus:border-[#E40714] outline-none transition-all w-64"
+                      className="pl-12 pr-4 py-3 rounded-xl border-2 border-[#C6C6C6]/30 focus:border-[#E40714] outline-none transition-all w-full"
                     />
                   </div>
                   <select
@@ -788,13 +788,13 @@ export default function AdminDashboard() {
                       {article.image_url && (
                         <img src={article.image_url} alt="" className="w-full sm:w-32 h-40 sm:h-32 object-cover rounded-xl shadow-md" loading="lazy" />
                       )}
-                      <div className="flex-1 min-w-0 w-full">
+                      <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                           <span className="px-3 py-1 bg-[#E40714]/10 text-[#E40714] text-[12px] rounded-lg font-bold">{typeof article.category === "string" ? article.category : tField(article.category as any, "fr")}</span>
                           {getStatusBadge(article.status)}
                           {article.featured && <span className="px-3 py-1 bg-yellow-500/10 text-yellow-600 text-[12px] rounded-lg font-bold">A la une</span>}
                         </div>
-                        <h3 className="text-[18px] sm:text-[22px] text-[#212121] font-rajdhani font-bold mb-2 group-hover:text-[#E40714] transition-colors line-clamp-2">
+                        <h3 className="text-[22px] text-[#212121] font-rajdhani font-bold mb-2 group-hover:text-[#E40714] transition-colors truncate max-sm:text-[18px] max-sm:whitespace-normal max-sm:line-clamp-2">
                           {tField(article.title, "fr")}
                         </h3>
                         <p className="text-[14px] text-[#1B1B1B]/60 mb-3 line-clamp-2">{tField(article.excerpt, "fr")}</p>
@@ -803,7 +803,7 @@ export default function AdminDashboard() {
                           <span className="flex items-center gap-1"><Eye size={14} />{(Number(safe(article.views)) || 0).toLocaleString()} vues</span>
                         </div>
                       </div>
-                      <div className="flex gap-2 w-full sm:w-auto justify-end">
+                      <div className="flex gap-2">
                         <motion.button
                           className="p-3 bg-blue-500/10 text-blue-600 rounded-xl hover:bg-blue-500/20 transition-all"
                           whileHover={{ scale: 1.1 }}
@@ -842,15 +842,15 @@ export default function AdminDashboard() {
                   <h2 className="text-[36px] text-[#212121] font-rajdhani font-black uppercase">Gestion des realisations</h2>
                   <p className="text-[14px] text-[#1B1B1B]/60 mt-1">{filteredRealisations.length} projet{filteredRealisations.length > 1 ? "s" : ""}</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="relative">
+                <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                  <div className="relative flex-1 min-w-[200px]">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1B1B1B]/40" size={20} />
                     <input
                       type="text"
                       placeholder="Rechercher..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-12 pr-4 py-3 rounded-xl border-2 border-[#C6C6C6]/30 focus:border-[#E40714] outline-none transition-all w-64"
+                      className="pl-12 pr-4 py-3 rounded-xl border-2 border-[#C6C6C6]/30 focus:border-[#E40714] outline-none transition-all w-full"
                     />
                   </div>
                   <select
