@@ -34,6 +34,7 @@
     "projectsDone": "Projects completed",
     "installed": "Installed",
     "capacity": "Total capacity",
+    "capacityUnit": "t/yr",
     "employees": "Employees",
     "locations": "International locations"
   },

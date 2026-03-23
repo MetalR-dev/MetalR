@@ -47,7 +47,7 @@ export function PartnersScroller() {
         }
       `}</style>
 
-      <div className="mb-14 text-center">
+      <div className="mb-8 text-center">
         <h3 className="text-[16px] font-rajdhani font-bold uppercase text-[#E40714] tracking-wider">
           {t("partners.title")}
         </h3>

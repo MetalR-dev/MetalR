@@ -995,6 +995,12 @@
     height: 180px !important;
   }
 
+  /* ---------- PHOTOVOLTAIQUE — Split panel height ---------- */
+  .pv-split-panel {
+    height: auto !important;
+    min-height: 640px !important;
+  }
+
   /* ---------- PHOTOVOLTAIQUE — Certifications dark section ---------- */
 
   /* Reduce padding and add side margin */
@@ -1019,6 +1025,22 @@
   /* Fix padding for right column items on mobile */
   .pv-certs-section > div:last-child > div:last-child > div {
     padding-left: 0 !important;
+  }
+
+  /* ---------- QUOTE BANNER — hide behind mobile menu overlay ---------- */
+  .quote-banner-fixed {
+    z-index: 25 !important;
+  }
+
+  /* ---------- OUVRAGES D'ART — Chiffres grid ---------- */
+  .oa-chiffres-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .oa-chiffres-sep {
+    display: none !important;
   }
 
   /* ---------- OUVRAGES D'ART — Expertise dark section ---------- */

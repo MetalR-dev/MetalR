@@ -57,7 +57,7 @@ export function KeyStatsSection() {
   const stats = [
     { target: 1000, prefix: "+", suffix: "", label: t("stats.projectsDone") },
     { target: 250, prefix: "", suffix: "", unit: "MW", label: t("stats.installed") },
-    { target: 12000, prefix: "", suffix: "", unit: "t/an", label: t("stats.capacity") },
+    { target: 12000, prefix: "", suffix: "", unit: t("stats.capacityUnit"), label: t("stats.capacity") },
     { target: 200, prefix: "", suffix: "", label: t("stats.employees") },
     { target: 8, prefix: "", suffix: "", label: t("stats.locations") },
   ];
@@ -139,7 +139,7 @@ export function KeyStatsSection() {
                 }}
               />
 
-              <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 10 }}>
+              <div className="keystats-value" style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 10 }}>
                 <span
                   style={{
                     fontSize: 52,

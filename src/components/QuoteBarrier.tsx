@@ -10,6 +10,7 @@ export function QuoteBanner() {
 
   return (
     <div
+      className="quote-banner-fixed"
       style={{
         position: "fixed",
         bottom: "12px",

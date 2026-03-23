@@ -34,6 +34,7 @@
     "projectsDone": "已完成项目",
     "installed": "已安装",
     "capacity": "总产能",
+    "capacityUnit": "吨/年",
     "employees": "员工人数",
     "locations": "国际分布"
   },

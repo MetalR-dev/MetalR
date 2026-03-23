@@ -186,7 +186,7 @@ export function HeroSection() {
                       <AnimatePresence mode="wait">
                         <motion.div
                           key={`icon-${badgeIndex}`}
-                          className="w-12 h-12 bg-[#E40714] rounded-xl flex items-center justify-center"
+                          className="w-12 h-12 bg-[#E40714] rounded-xl flex items-center justify-center flex-shrink-0"
                           initial={{ scale: 0.5, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           exit={{ scale: 0.5, opacity: 0 }}

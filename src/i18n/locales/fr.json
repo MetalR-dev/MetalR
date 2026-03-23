@@ -34,6 +34,7 @@
     "projectsDone": "Projets réalisés",
     "installed": "Installés",
     "capacity": "Capacité totale",
+    "capacityUnit": "t/an",
     "employees": "Employés",
     "locations": "Implantations internationales"
   },

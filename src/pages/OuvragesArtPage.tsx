@@ -176,12 +176,13 @@ export default function OuvragesArtPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
             viewport={{ once: true }}
+            className="oa-chiffres-grid"
             style={{ display: "flex", alignItems: "center", gap: 0 }}
           >
             {chiffres.map((ch, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center" }}>
                 {i > 0 && (
-                  <div style={{ width: 1, height: 48, backgroundColor: "rgba(0,0,0,0.1)", margin: "0 48px" }} />
+                  <div className="oa-chiffres-sep" style={{ width: 1, height: 48, backgroundColor: "rgba(0,0,0,0.1)", margin: "0 48px" }} />
                 )}
                 <div>
                   <span style={{ fontSize: 42, fontWeight: 700, color: "#E40714", fontFamily: "'Rajdhani', sans-serif", lineHeight: 1 }}>
@@ -441,7 +442,7 @@ export default function OuvragesArtPage() {
                 {t("ouvragesArt.ctaDesc")}
               </p>
             </div>
-            <div style={{ display: "flex", gap: 12, flexShrink: 0 }}>
+            <div className="flex flex-col sm:flex-row" style={{ gap: 12, flexShrink: 0 }}>
               <Link to="/contact">
               <motion.button
                 style={{

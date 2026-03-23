@@ -34,6 +34,7 @@
     "projectsDone": "مشاريع منجزة",
     "installed": "مُركَّبة",
     "capacity": "الطاقة الإنتاجية الإجمالية",
+    "capacityUnit": "طن/سنة",
     "employees": "موظف",
     "locations": "مواقع دولية"
   },
