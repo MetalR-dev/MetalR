@@ -783,18 +783,18 @@ export default function AdminDashboard() {
                       key={article.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 bg-gradient-to-br from-[#C6C6C6]/5 to-white rounded-2xl border-2 border-[#C6C6C6]/30 hover:border-[#E40714] transition-all duration-300"
+                      className="group admin-article-card flex items-center gap-6 p-6 bg-gradient-to-br from-[#C6C6C6]/5 to-white rounded-2xl border-2 border-[#C6C6C6]/30 hover:border-[#E40714] transition-all duration-300"
                     >
                       {article.image_url && (
-                        <img src={article.image_url} alt="" className="w-full sm:w-32 h-40 sm:h-32 object-cover rounded-xl shadow-md" loading="lazy" />
+                        <img src={article.image_url} alt="" className="admin-article-img w-32 h-32 object-cover rounded-xl shadow-md" loading="lazy" />
                       )}
                       <div className="flex-1 min-w-0">
-                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                        <div className="flex items-center gap-2 mb-3 flex-wrap">
                           <span className="px-3 py-1 bg-[#E40714]/10 text-[#E40714] text-[12px] rounded-lg font-bold">{typeof article.category === "string" ? article.category : tField(article.category as any, "fr")}</span>
                           {getStatusBadge(article.status)}
                           {article.featured && <span className="px-3 py-1 bg-yellow-500/10 text-yellow-600 text-[12px] rounded-lg font-bold">A la une</span>}
                         </div>
-                        <h3 className="text-[22px] text-[#212121] font-rajdhani font-bold mb-2 group-hover:text-[#E40714] transition-colors truncate max-sm:text-[18px] max-sm:whitespace-normal max-sm:line-clamp-2">
+                        <h3 className="text-[22px] text-[#212121] font-rajdhani font-bold mb-2 group-hover:text-[#E40714] transition-colors truncate">
                           {tField(article.title, "fr")}
                         </h3>
                         <p className="text-[14px] text-[#1B1B1B]/60 mb-3 line-clamp-2">{tField(article.excerpt, "fr")}</p>
@@ -803,7 +803,7 @@ export default function AdminDashboard() {
                           <span className="flex items-center gap-1"><Eye size={14} />{(Number(safe(article.views)) || 0).toLocaleString()} vues</span>
                         </div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 admin-article-actions">
                         <motion.button
                           className="p-3 bg-blue-500/10 text-blue-600 rounded-xl hover:bg-blue-500/20 transition-all"
                           whileHover={{ scale: 1.1 }}

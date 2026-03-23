@@ -1027,6 +1027,24 @@
     padding-left: 0 !important;
   }
 
+  /* ---------- ADMIN — Article cards mobile ---------- */
+  .admin-article-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  .admin-article-img {
+    width: 100% !important;
+    height: 180px !important;
+  }
+
+  .admin-article-actions {
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+
   /* ---------- QUOTE BANNER — hide behind mobile menu overlay ---------- */
   .quote-banner-fixed {
     z-index: 25 !important;
