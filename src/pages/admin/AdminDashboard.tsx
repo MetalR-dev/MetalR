@@ -1481,7 +1481,7 @@ export default function AdminDashboard() {
             )}
 
             {/* Action Buttons */}
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <motion.button
                 className="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-[#E40714] to-[#C00612] text-white rounded-2xl font-bold text-[18px] uppercase tracking-wide disabled:opacity-50"
                 whileHover={{ scale: 1.02 }}
