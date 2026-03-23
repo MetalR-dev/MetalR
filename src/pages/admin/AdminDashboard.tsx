@@ -562,7 +562,7 @@ export default function AdminDashboard() {
   // LangTabs and TranslatedInput are defined outside the component to avoid re-creation on each render
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5] pt-24 pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5] pt-32 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
@@ -899,7 +899,7 @@ export default function AdminDashboard() {
                         <div className="absolute inset-0 bg-gradient-to-t from-[#212121]/60 to-transparent" />
                         <div className="absolute top-4 right-4">{getStatusBadge(r.status)}</div>
                       </div>
-                      <div className="p-6">
+                      <div className="p-4 sm:p-6">
                         <span className="px-3 py-1 bg-[#E40714]/10 text-[#E40714] text-[12px] rounded-lg font-bold">{typeof r.category === "string" ? r.category : tField(r.category as any, "fr")}</span>
                         <h3 className="text-[24px] text-[#212121] font-rajdhani font-bold mt-3 mb-3 group-hover:text-[#E40714] transition-colors">
                           {tField(r.title, "fr")}
@@ -909,7 +909,7 @@ export default function AdminDashboard() {
                           <p>{safe(r.year)} {r.duration ? `- ${tField(r.duration, "fr")}` : ""} {r.surface ? `- ${safe(r.surface)}` : ""}</p>
                           {r.client && <p>{tField(r.client, "fr")}</p>}
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 px-1 sm:px-0">
                           <motion.button
                             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 text-blue-600 rounded-xl font-bold"
                             whileHover={{ scale: 1.02 }}
