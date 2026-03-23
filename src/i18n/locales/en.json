@@ -692,7 +692,11 @@
   "googleReviews": {
     "title": "What our clients say",
     "subtitle": "Customer satisfaction is our best reference",
-    "reviewFrom": "Review from"
+    "reviewFrom": "Review from",
+    "review1": "Very professional and very well done!!!! Highly recommended!!! Thank you so much",
+    "review2": "Very professional and very serious",
+    "review3": "Very professional and very serious",
+    "review3Author": "Review author on \"Entreprise-charpentier.fr\""
   },
   "actualites": {
     "badge": "Latest news",

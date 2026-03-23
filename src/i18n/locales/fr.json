@@ -692,7 +692,11 @@
   "googleReviews": {
     "title": "Quelques avis de nos clients",
     "subtitle": "La satisfaction de nos clients est notre meilleure référence",
-    "reviewFrom": "Avis de"
+    "reviewFrom": "Avis de",
+    "review1": "Très pro et très bien réalisé !!!! Je recommande !!! Merci beaucoup",
+    "review2": "Très pro et très sérieux",
+    "review3": "Très pro et très sérieux",
+    "review3Author": "Auteur de l'avis sur \"Entreprise-charpentier.fr\""
   },
   "actualites": {
     "badge": "Dernières actualités",

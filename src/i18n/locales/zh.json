@@ -692,7 +692,11 @@
   "googleReviews": {
     "title": "客户评价",
     "subtitle": "客户满意是我们最好的参考",
-    "reviewFrom": "来自"
+    "reviewFrom": "来自",
+    "review1": "非常专业，完成得非常好！！！！强烈推荐！！！非常感谢",
+    "review2": "非常专业，非常认真",
+    "review3": "非常专业，非常认真",
+    "review3Author": "\"Entreprise-charpentier.fr\" 上的评论作者"
   },
   "actualites": {
     "badge": "最新资讯",

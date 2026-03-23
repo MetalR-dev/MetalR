@@ -10,7 +10,7 @@ const reviews = [
     initial: "N",
     color: "#00897B",
     rating: 5,
-    text: "Très pro et très bien réalisé!!!! Je recommande!!! Merci beaucoup",
+    textKey: "googleReviews.review1",
     source: "Google",
   },
   {
@@ -18,15 +18,15 @@ const reviews = [
     initial: "t",
     color: "#4CAF50",
     rating: 5,
-    text: "Très pro et très sérieux",
+    textKey: "googleReviews.review2",
     source: "Google",
   },
   {
-    name: 'Auteur de l\'avis sur "Entreprise-charpentier.fr"',
+    nameKey: "googleReviews.review3Author",
     initial: "E",
     color: "#1565C0",
     rating: 5,
-    text: "Très pro et très sérieux",
+    textKey: "googleReviews.review3",
     source: "Entreprise-charpentier.fr",
   },
 ];
@@ -161,7 +161,7 @@ export function GoogleReviewsSection() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {review.name}
+                    {review.nameKey ? t(review.nameKey) : review.name}
                   </div>
                   <div
                     style={{
@@ -194,7 +194,7 @@ export function GoogleReviewsSection() {
                   margin: 0,
                 }}
               >
-                {review.text}
+                {t(review.textKey)}
               </p>
             </motion.div>
           ))}
