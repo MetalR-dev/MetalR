@@ -1021,6 +1021,30 @@
     padding-left: 0 !important;
   }
 
+  /* ---------- OUVRAGES D'ART — Expertise dark section ---------- */
+
+  .oa-certs-section {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    padding: 32px 20px !important;
+  }
+
+  .oa-certs-section > div:last-child {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Hide vertical separator */
+  .oa-certs-section > div:last-child > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Fix padding for right column items */
+  .oa-certs-section > div:last-child > div:last-child > div {
+    padding-left: 0 !important;
+  }
+
 }
 
 /* ==========================================================================

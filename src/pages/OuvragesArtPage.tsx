@@ -197,7 +197,7 @@ export default function OuvragesArtPage() {
         </section>
 
         {/* Expertise — Dark band with 2-column layout + horizontal separators */}
-        <section style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, margin: "0 auto 80px", padding: "56px 48px" }}>
+        <section className="oa-certs-section" style={{ backgroundColor: "#1A1A1A", borderRadius: 24, maxWidth: 1280, margin: "0 auto 80px", padding: "56px 48px" }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
